@@ -62,7 +62,8 @@ stages:
         inputs:
           targetType: 'inline'
           script: |
-            - script: |
                 echo "Running Bash Script"
-                ./script/updateK8sManifests.sh
-          bashEnvValue: 'vote $(imageRepository) $(tag)'
+                echo "Image repository: $(imageRepository)"
+                echo "Tag: $(tag)"
+                ./script/updateK8sManifests.sh result $(imageRepository) $(tag)
+         

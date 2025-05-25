@@ -15,7 +15,7 @@ spec:
         app: vote
     spec:
       containers:
-      - image: azurecicidregistry/:
+      - image: azurecicidregistry/examplevotingapp_worker
         name: vote
         ports:
         - containerPort: 80

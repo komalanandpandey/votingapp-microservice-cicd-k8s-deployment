@@ -15,8 +15,10 @@ spec:
         app: result
     spec:
       containers:
-      - image: dockersamples/examplevotingapp_result
+      - image: azurecicidregistry.azurecr.io/resultapp:28
         name: result
         ports:
         - containerPort: 80
           name: result
+      imagePullSecrets:
+          - acr-secret
